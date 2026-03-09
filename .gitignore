@@ -1,0 +1,9 @@
+# Dépendances et données Docker
+mysql_data/
+
+# Variables d'environnement
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db

@@ -1,0 +1,127 @@
+:root {
+  --bg-principal:#E34A0D;
+}
+body {
+  margin:0;
+  font-family:sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* nav bar */
+header {
+  background:var(--bg-principal);
+  color:white;
+  padding:1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+#logo a {
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+nav[aria-label] a {
+  color:white;
+  text-decoration:none;
+  margin-left:1rem;
+}
+nav[aria-label] a:hover,
+nav[aria-label] a:focus {
+  text-decoration:underline;
+  outline:2px solid white;
+  outline-offset:3px;
+}
+#map {
+  width:100%;
+  height:calc(100vh - 60px);
+}
+/* barre de recherche carte*/
+#search-box {
+  position:absolute;
+  top:75px;
+  left:80px;
+  background:rgba(255, 255, 255, 0.699);
+  padding:0.5rem 0.5rem;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.3);
+  width:500px;
+  display:flex;
+  gap:0.5rem;
+  z-index:1000;
+}
+#search-box input {
+  flex:1;
+  border:1px solid #ccc;
+  padding:0.4rem;
+  border-radius:4px;
+}
+#search-box button {
+  background:var(--bg-principal);
+  color:white;
+  border:none;
+  padding:0.4rem 0.6rem;
+  border-radius:4px;
+  cursor:pointer;
+}
+#search-box button:hover,
+#search-box button:focus {
+  background:#c13d0b;
+  outline:2px solid #000;
+  outline-offset:2px;
+}
+/* barre de recherche feed */
+#search-feed {
+  display: flex;
+  border: none;
+}
+#search-feed input {
+  display: flex;
+  height: 30px;
+  width: 300px;
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+}
+#search-feed button {
+  background-color: white;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+}
+#search-feed button:hover,
+#search-feed button:focus {
+  background-color: #fcc01d;
+  outline: 2px solid #6d6d6d;
+}
+/* responsive side */
+@media screen and (min-width: 678px) {
+  svg {
+    display: none;
+  }
+} 
+@media screen and (max-width: 678px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+  nav a {
+    display: none;
+  }
+  #search-feed input {
+    height: 30px;
+    width: 180px;
+  }
+  #search-box {
+    width: 420px;
+  }
+  svg {
+    display: flex;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #search-box {
+    width: 370px;
+  }
+}
